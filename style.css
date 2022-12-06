@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-heading: 'Staatliches', sans-serif;
+  --ff-texting: 'Palanquin', sans-serif;
+
+  /*--hue: 250;*/
+  --bg-primary-heading: #8E9AAF;
+  --bg-secondary-heading: #CBC0D3;
+  --bg-primary: #EFF1FF;
+  --fc-primay: #FEEAFA;
+  --fc-secondary: #4A4E69;
+  --fc-texting-primary: #FFFFFF;
+  --fc-texting-secondary: #23053A;
+
+  font-size: 62,5%;
+  --fs-body: 2.0rem;
+  --fs-heading: 4.0rem;
+}
+
+body {
+  background-color: var(--bg-primary);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+ font-family: var(--ff-heading);
+
+ text-align: center;
+ background: var(--bg-primary-heading);
+
+ height: 27.9rem;
+}
+
+header img {
+  margin: 3.2rem ;
+  width: 13.7rem;
+}
+
+header h1 {
+  font-weight: 400;
+  font-size: var(--fs-heading);  
+
+  color: var(--fc-texting-primary);
+
+  background-color: var(--bg-secondary-heading);
+}
+
+p {
+  font-family: var(--ff-texting);
+
+  color: var(--fc-texting-secondary);
+
+  text-align: center;
+  font-size: var(--fs-body);
+
+  line-height: 2.0rem;
+  margin-bottom: 4.1rem;
+}
+
+main {
+  margin: 1.4rem 3.2rem;
+
+  display: grid;
+  gap: 3.2rem;
+}
+
+.card {
+  position: relative;
+  font-family: var(--ff-heading);
+}
+
+.card img {
+  height: 25rem;
+  object-fit: cover;
+  
+  border-radius: 2.0rem;
+  transition: all 220ms;
+
+  animation: downtop 700ms;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  opacity: 0.4;
+
+}
+
+.card h2 {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  font-size: var(--ff-heading);
+  font-weight: 400;
+
+  border-radius: 2rem;
+  background-color: var(--fc-primay);
+
+  padding: 1rem;
+  height: 1.5rem;
+
+  display: inline-flex;
+  align-items: center;
+
+  animation: topdown 700ms 350ms backwards;
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
